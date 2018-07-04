@@ -1,0 +1,10 @@
+<p>Some text</p>
+<!-- not working -->
+<p>{{name}}</p>
+<!-- null -->
+<div innerHTML={{name}}></div>
+<!-- Bypassing protection against XSS using a trust pipe -> undefined -->
+<h1 [innerHTML]="name | trustPipe"></h1>
+<!-- innerHTML -> working -->
+<p id="some_id"></p>
+
